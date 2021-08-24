@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-const Counter = () => {
+const Counter = ({handleDecrement,handleIncrement,count}) => {
     
 
     return ( <div> 
