@@ -8,9 +8,11 @@ const Product = ({title,price,onAddToCart,count}) => {
     return ( 
     <div> 
         <h1 className="colorT">{title}</h1> 
-        {count}
+     
+           {count}
     <div className = {priceClass }> 
       <b >Price :</b> {price}
+     
       <button
       onClick={()=> { onAddToCart(title)}}
       > Add to Cart</button>

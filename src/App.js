@@ -1,25 +1,25 @@
-import React from 'react';
+import React ,{ useState }from 'react';
 import Product from './components/Product';
 import Counter from './components/Counter';
-import { useState } from 'react';
+
  const handleAddtoCart= (title)=>{
      alert("Add to cart Click for "+title);
  };
 
  
+function App() {
+ 
  const [count,setCount] = React.useState(5);
-    const handleIncrement=
+    const handleIncrement =
 
         () => {
             console.log("inc called");
-            setCount(++count)
+            setCount(count+1)
     
-        }
+        };
         const handleDecrement=()=>{console.log("dec called");
-    setCount(--count)
+    setCount(count-1)
       };
-function App() {
- 
   // 1> const [persons,setPersons]= React.useState(["Zahid","Muneeb","Ali"]);
 
   return (
@@ -28,7 +28,7 @@ function App() {
       <h1 style ={{backgroundColor:"blue"}}>Components example </h1>
       <Counter count ={count} handleIncrement={handleIncrement} handleDecrement ={handleDecrement}/>
           <Product title="Audi" price="300" onAddToCart={handleAddtoCart}/>
-      <Product title="Honda" price="600"onAddToCart={handleAddtoCart} />
+      <Product title="Honda" price="600"onAddToCart={handleAddtoCart}  count ={count}/>
       <Product title="toyota" price="400" onAddToCart={handleAddtoCart}/>
       
 
